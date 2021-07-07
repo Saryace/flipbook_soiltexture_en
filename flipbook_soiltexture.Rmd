@@ -13,11 +13,10 @@ nature:
       highlightLines: true
       countIncrementalSlides: false
 ---
-
-```{r setup, include = FALSE}
+```{r setup, include=FALSE}
 library(flipbookr)
 library(tidyverse)
-knitr::opts_chunk$set(fig.width = 6, message = FALSE, 
+knitr::opts_chunk$set(fig.width = 5, message = FALSE, 
                       warning = FALSE, comment = "", 
                       cache = F, fig.retina = 5)
 ```
@@ -30,7 +29,6 @@ knitr::opts_chunk$set(fig.width = 6, message = FALSE,
   }
 }
 ```
-
 ---
 name: about-me
 class: about-me-slide, inverse, middle, center
@@ -280,8 +278,7 @@ USDA_texto
 ggplot(data = USDA, aes(
   y = Clay,
   x = Sand,
-  z = Silt,
-  colour = "black"
+  z = Silt
 )) +
   coord_tern(L = "x", T = "y", R = "z") +
   geom_polygon(
@@ -340,8 +337,7 @@ triangulo_cientificos <-
 ggplot(data = USDA, aes(
   y = Clay,
   x = Sand,
-  z = Silt,
-  colour = "black"
+  z = Silt
 )) +
   coord_tern(L = "x", T = "y", R = "z") +
   geom_polygon(
@@ -369,6 +365,8 @@ ggplot(data = USDA, aes(
 ```{r plot-label-7-out, ref.label="plot-label-7", echo=FALSE,warning=FALSE, message=FALSE}
 ```
 ]
+---
+`r chunk_reveal(chunk_name = "plot-label-7", title = "###Solo por diversión")`
 ---
 .pull-left[
 ### {soiltexture}
