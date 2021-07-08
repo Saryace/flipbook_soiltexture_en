@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Triángulos de textura en R</title>
+    <title>Soil texture triangles using R</title>
     <meta charset="utf-8" />
     <meta name="author" content="Sara Acevedo" />
-    <script src="flipbook_soiltexture_files/header-attrs-2.7/header-attrs.js"></script>
-    <link href="flipbook_soiltexture_files/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="flipbook_soiltexture_files/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
-    <link href="flipbook_soiltexture_files/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
-    <script src="flipbook_soiltexture_files/htmlwidgets-1.5.3/htmlwidgets.js"></script>
-    <script src="flipbook_soiltexture_files/jquery-1.12.4/jquery.min.js"></script>
-    <link href="flipbook_soiltexture_files/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
-    <script src="flipbook_soiltexture_files/leaflet-1.3.1/leaflet.js"></script>
-    <link href="flipbook_soiltexture_files/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
-    <script src="flipbook_soiltexture_files/proj4-2.6.2/proj4.min.js"></script>
-    <script src="flipbook_soiltexture_files/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
-    <link href="flipbook_soiltexture_files/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
-    <script src="flipbook_soiltexture_files/leaflet-binding-2.0.4.1/leaflet.js"></script>
+    <script src="flipbook_soiltexture_en_files/header-attrs-2.7/header-attrs.js"></script>
+    <link href="flipbook_soiltexture_en_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="flipbook_soiltexture_en_files/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
+    <link href="flipbook_soiltexture_en_files/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
+    <script src="flipbook_soiltexture_en_files/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+    <script src="flipbook_soiltexture_en_files/jquery-1.12.4/jquery.min.js"></script>
+    <link href="flipbook_soiltexture_en_files/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+    <script src="flipbook_soiltexture_en_files/leaflet-1.3.1/leaflet.js"></script>
+    <link href="flipbook_soiltexture_en_files/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+    <script src="flipbook_soiltexture_en_files/proj4-2.6.2/proj4.min.js"></script>
+    <script src="flipbook_soiltexture_en_files/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+    <link href="flipbook_soiltexture_en_files/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+    <script src="flipbook_soiltexture_en_files/leaflet-binding-2.0.4.1/leaflet.js"></script>
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Triángulos de textura en R
-## Laboratorio Biofísica de Suelos
+# Soil texture triangles using R
+## Soil Biophysics Lab
 ### Sara Acevedo
-### 06 / 07 / 2021
+### 08 / 07 / 2021
 
 ---
 
@@ -43,14 +43,14 @@ class: center, middle, inverse, title-slide
 name: about-me
 class: about-me-slide, inverse, middle, center
 
-# Sobre mi
+# About me
 
 &lt;img style="border-radius: 50%;" src="https://saryace.github.io/images/profile.png" width="150px"/&gt;
 
 *Sara Acevedo*
 
 *Dr. (c) Ciencias de la Ingeniería*
-*Msc. Soil and Biogeochemistry*
+*Msc. Soils and Biogeochemistry*
 
 .fade[Pontificia Universidad Católica de Chile&lt;br&gt;Santiago, Chile]
 
@@ -61,11 +61,11 @@ class: about-me-slide, inverse, middle, center
 name: about-me
 class: about-me-slide, inverse, middle, center
 
-# Sobre Soil Biophysics Lab
+# About Soil Biophysics Lab
 
 &lt;img style="border-radius: 50%;" src="https://static.wixstatic.com/media/a71414_85de21ba13024a48a60097ce851dae16~mv2.png" width="250px"/&gt;
 
-*Laboratorio de Biofísica de Suelos*
+*Soil Biophysics Lab*
 
 *PI: Dr. Carlos Bonilla*
 
@@ -80,43 +80,43 @@ class: inverse
 
 ## Soil Biophysics Laboratory
 
-<div id="htmlwidget-8b465926f4756185a8af" style="width:100%;height:360px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-8b465926f4756185a8af">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addPopups","args":[-33.4995699,-70.6149164,"Soil Biophysics Lab",null,null,{"maxWidth":300,"minWidth":50,"autoPan":true,"keepInView":false,"closeButton":false,"className":""}]}],"limits":{"lat":[-33.4995699,-33.4995699],"lng":[-70.6149164,-70.6149164]},"setView":[[-33.4995699,-70.6149164],17,[]]},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-9d84e67ca27c7a36104f" style="width:100%;height:360px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9d84e67ca27c7a36104f">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addPopups","args":[-33.4995699,-70.6149164,"Soil Biophysics Lab",null,null,{"maxWidth":300,"minWidth":50,"autoPan":true,"keepInView":false,"closeButton":false,"className":""}]}],"limits":{"lat":[-33.4995699,-33.4995699],"lng":[-70.6149164,-70.6149164]},"setView":[[-33.4995699,-70.6149164],17,[]]},"evals":[],"jsHooks":[]}</script>
 ---
 class: middle
 
-## Triangulo de textura
+## Soil texture triangle
 
-representacion de los porcentajes de arena, limo y arcilla
+representation of sand, silt and clay percentages
 
 ---
 
-##Para empezar, creamos un dataframe de ejemplo
+##Example dataframe
 
 
 ```r
-datos_suelo &lt;- data.frame(
-  suelo = c("a", "b", "c", "d"),
-  arena = c(15, 18, 57, 32),
-  limo = c(52, 70, 8, 26),
-  arcilla = c(33, 12, 35, 42),
+soil_data &lt;- data.frame(
+  soil= c("a", "b", "c", "d"),
+  sand = c(15, 18, 57, 32),
+  silt = c(52, 70, 8, 26),
+  clay = c(33, 12, 35, 42),
   om = c(1, 3, 4, 11),
   bd = c(1.33, 1.38, 1.76, 1.15)
 )
 ```
 
-* Arena + Limo + Arcilla = 100%
-* Variables extra, om y bd
+* sand + silt + clay = 100%
+* Extra variables, om y bd
 
 ---
-### Con la función summary podemos ver los datos
+### Using summary function for check the data
 
 ```r
-summary(datos_suelo)
+summary(soil_data)
 ```
 
 ```
-    suelo               arena            limo         arcilla     
+     soil                sand            silt           clay      
  Length:4           Min.   :15.00   Min.   : 8.0   Min.   :12.00  
  Class :character   1st Qu.:17.25   1st Qu.:21.5   1st Qu.:27.75  
  Mode  :character   Median :25.00   Median :39.0   Median :34.00  
@@ -134,9 +134,9 @@ summary(datos_suelo)
 ---
 class: inverse, middle, right
 
-##Paquete {soiltexture}
-### Autores: Julien Moeys et al., 2018
-### [Link a repositorio de github](https://github.com/julienmoeys/soiltexture)
+##package {soiltexture}
+### Authors: Julien Moeys et al., 2018
+### [link-github](https://github.com/julienmoeys/soiltexture)
 
 ---
 
@@ -147,15 +147,15 @@ class: inverse, middle, right
 library(soiltexture)
 TT.plot(
   class.sys = "USDA.TT",
-  tri.data = datos_suelo,
-  css.names = c("arcilla", "limo", "arena"),
-  main = "Triángulo textura"
+  tri.data = soil_data,
+  css.names = c("clay", "silt", "sand"),
+  main = "Soil texture triangle"
 )
 ```
 ]
 
 .pull-right[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-out-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-out-1.png" width="360" /&gt;
 ]
 ---
 
@@ -166,16 +166,16 @@ TT.plot(
 library(soiltexture)
 TT.plot(
   class.sys = "USDA.TT",
-  tri.data = datos_suelo,
-  css.names = c("arcilla", "limo", "arena"),
-  main = "Triángulo textura",
+  tri.data = soil_data,
+  css.names = c("clay", "silt", "sand"),
+  main = "Soil texture triangle",
   z.name = "om"
 )
 ```
 ]
 
 .pull-right[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-2-out-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-2-out-1.png" width="360" /&gt;
 ]
 ---
 
@@ -186,9 +186,9 @@ TT.plot(
 library(soiltexture)
 TT.plot(
   class.sys = "USDA.TT",
-  tri.data = datos_suelo,
-  css.names = c("arcilla", "limo", "arena"),
-  main = "Triángulo textura",
+  tri.data = soil_data,
+  css.names = c("clay", "silt", "sand"),
+  main = "Soil texture triangle",
   z.name = "om",
   cex.axis = 0.8,
   cex.lab = 0.8
@@ -197,15 +197,15 @@ TT.plot(
 ]
 
 .pull-right[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-3-out-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-3-out-1.png" width="360" /&gt;
 ]
 ---
 class: inverse, middle, right
 
-##Paquete {ggplot2} + paquete {ggtern}
-### Autores: Wickham et al., 2016 {ggplot} y Hamilton 2016 {ggtern}
-### [Link a ggplot2](https://ggplot2.tidyverse.org/)
-### [Link a ggtern](https://CRAN.R-project.org/package=ggtern)
+## packages {ggplot2} +{ggtern}
+### Authors: Wickham et al., 2016 {ggplot} y Hamilton 2016 {ggtern}
+### [Link-ggplot2](https://ggplot2.tidyverse.org/)
+### [Link-ggtern](https://CRAN.R-project.org/package=ggtern)
 
 ---
 ### r package {ggplot2 + ggtern}
@@ -215,18 +215,18 @@ class: inverse, middle, right
 library(ggplot2)
 library(ggtern)
 theme_set(theme_bw())
-datos_suelo %&gt;%
+soil_data %&gt;%
   ggtern(aes(
-    x = arena,
-    y = arcilla,
-    z = limo,
+    x = sand,
+    y = clay,
+    z = silt,
     color = om
   )) + 
   geom_point(size = 5) + 
   theme_showarrows() +
-    labs(yarrow = "Arcilla (%)",
-       zarrow = "Limo (%)",
-       xarrow = "Arena(%)") +
+    labs(yarrow = "clay (%)",
+       zarrow = "silt (%)",
+       xarrow = "sand(%)") +
   scale_colour_gradient(low = "yellow",
                         high = "red") +
   theme_clockwise() 
@@ -234,12 +234,12 @@ datos_suelo %&gt;%
 ]
 
 .pull-right[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-4-out-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-4-out-1.png" width="360" /&gt;
 ]
 ---
 count: false
  
-### Triángulo simple
+### Simple triangle
 .panel1-plot-label-4-auto[
 
 ```r
@@ -254,7 +254,7 @@ library(ggplot2)  #&lt;&lt;
 ---
 count: false
  
-### Triángulo simple
+### Simple triangle
 .panel1-plot-label-4-auto[
 
 ```r
@@ -270,7 +270,7 @@ library(ggtern)  #&lt;&lt;
 ---
 count: false
  
-### Triángulo simple
+### Simple triangle
 .panel1-plot-label-4-auto[
 
 ```r
@@ -287,67 +287,67 @@ theme_set(theme_bw())  #&lt;&lt;
 ---
 count: false
  
-### Triángulo simple
+### Simple triangle
 .panel1-plot-label-4-auto[
 
 ```r
 library(ggplot2)
 library(ggtern)
 theme_set(theme_bw())
-datos_suelo   #&lt;&lt;
+soil_data   #&lt;&lt;
 ```
 ]
  
 .panel2-plot-label-4-auto[
 
 ```
-  suelo arena limo arcilla om   bd
-1     a    15   52      33  1 1.33
-2     b    18   70      12  3 1.38
-3     c    57    8      35  4 1.76
-4     d    32   26      42 11 1.15
+  soil sand silt clay om   bd
+1    a   15   52   33  1 1.33
+2    b   18   70   12  3 1.38
+3    c   57    8   35  4 1.76
+4    d   32   26   42 11 1.15
 ```
 ]
 
 ---
 count: false
  
-### Triángulo simple
+### Simple triangle
 .panel1-plot-label-4-auto[
 
 ```r
 library(ggplot2)
 library(ggtern)
 theme_set(theme_bw())
-datos_suelo %&gt;%
+soil_data %&gt;%
   ggtern(aes(  #&lt;&lt;
-    x = arena,  #&lt;&lt;
-    y = arcilla,  #&lt;&lt;
-    z = limo,  #&lt;&lt;
+    x = sand,  #&lt;&lt;
+    y = clay,  #&lt;&lt;
+    z = silt,  #&lt;&lt;
     color = om  #&lt;&lt;
   ))   #&lt;&lt;
 ```
 ]
  
 .panel2-plot-label-4-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-4_auto_05_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-4_auto_05_output-1.png" width="360" /&gt;
 ]
 
 ---
 count: false
  
-### Triángulo simple
+### Simple triangle
 .panel1-plot-label-4-auto[
 
 ```r
 library(ggplot2)
 library(ggtern)
 theme_set(theme_bw())
-datos_suelo %&gt;%
+soil_data %&gt;%
   ggtern(aes(
-    x = arena,
-    y = arcilla,
-    z = limo,
+    x = sand,
+    y = clay,
+    z = silt,
     color = om
   )) +
   geom_point(size = 5)   #&lt;&lt;
@@ -355,24 +355,24 @@ datos_suelo %&gt;%
 ]
  
 .panel2-plot-label-4-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-4_auto_06_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-4_auto_06_output-1.png" width="360" /&gt;
 ]
 
 ---
 count: false
  
-### Triángulo simple
+### Simple triangle
 .panel1-plot-label-4-auto[
 
 ```r
 library(ggplot2)
 library(ggtern)
 theme_set(theme_bw())
-datos_suelo %&gt;%
+soil_data %&gt;%
   ggtern(aes(
-    x = arena,
-    y = arcilla,
-    z = limo,
+    x = sand,
+    y = clay,
+    z = silt,
     color = om
   )) +
   geom_point(size = 5) +
@@ -381,91 +381,91 @@ datos_suelo %&gt;%
 ]
  
 .panel2-plot-label-4-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-4_auto_07_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-4_auto_07_output-1.png" width="360" /&gt;
 ]
 
 ---
 count: false
  
-### Triángulo simple
+### Simple triangle
 .panel1-plot-label-4-auto[
 
 ```r
 library(ggplot2)
 library(ggtern)
 theme_set(theme_bw())
-datos_suelo %&gt;%
+soil_data %&gt;%
   ggtern(aes(
-    x = arena,
-    y = arcilla,
-    z = limo,
+    x = sand,
+    y = clay,
+    z = silt,
     color = om
   )) +
   geom_point(size = 5) +
   theme_showarrows() +
-    labs(yarrow = "Arcilla (%)",  #&lt;&lt;
-       zarrow = "Limo (%)",  #&lt;&lt;
-       xarrow = "Arena(%)")   #&lt;&lt;
+    labs(yarrow = "clay (%)",  #&lt;&lt;
+       zarrow = "silt (%)",  #&lt;&lt;
+       xarrow = "sand(%)")   #&lt;&lt;
 ```
 ]
  
 .panel2-plot-label-4-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-4_auto_08_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-4_auto_08_output-1.png" width="360" /&gt;
 ]
 
 ---
 count: false
  
-### Triángulo simple
+### Simple triangle
 .panel1-plot-label-4-auto[
 
 ```r
 library(ggplot2)
 library(ggtern)
 theme_set(theme_bw())
-datos_suelo %&gt;%
+soil_data %&gt;%
   ggtern(aes(
-    x = arena,
-    y = arcilla,
-    z = limo,
+    x = sand,
+    y = clay,
+    z = silt,
     color = om
   )) +
   geom_point(size = 5) +
   theme_showarrows() +
-    labs(yarrow = "Arcilla (%)",
-       zarrow = "Limo (%)",
-       xarrow = "Arena(%)") +
+    labs(yarrow = "clay (%)",
+       zarrow = "silt (%)",
+       xarrow = "sand(%)") +
   scale_colour_gradient(low = "yellow",  #&lt;&lt;
                         high = "red")   #&lt;&lt;
 ```
 ]
  
 .panel2-plot-label-4-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-4_auto_09_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-4_auto_09_output-1.png" width="360" /&gt;
 ]
 
 ---
 count: false
  
-### Triángulo simple
+### Simple triangle
 .panel1-plot-label-4-auto[
 
 ```r
 library(ggplot2)
 library(ggtern)
 theme_set(theme_bw())
-datos_suelo %&gt;%
+soil_data %&gt;%
   ggtern(aes(
-    x = arena,
-    y = arcilla,
-    z = limo,
+    x = sand,
+    y = clay,
+    z = silt,
     color = om
   )) +
   geom_point(size = 5) +
   theme_showarrows() +
-    labs(yarrow = "Arcilla (%)",
-       zarrow = "Limo (%)",
-       xarrow = "Arena(%)") +
+    labs(yarrow = "clay (%)",
+       zarrow = "silt (%)",
+       xarrow = "sand(%)") +
   scale_colour_gradient(low = "yellow",
                         high = "red") +
   theme_clockwise()  #&lt;&lt;
@@ -473,7 +473,7 @@ datos_suelo %&gt;%
 ]
  
 .panel2-plot-label-4-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-4_auto_10_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-4_auto_10_output-1.png" width="360" /&gt;
 ]
 
 &lt;style&gt;
@@ -505,26 +505,26 @@ datos_suelo %&gt;%
 
 
 ---
-### Algo más avanzado
+### More features
 .pull-left[
 
 ```r
 library(ggplot2)
 library(ggtern)
 theme_set(theme_bw())
-datos_suelo %&gt;%
+soil_data %&gt;%
   ggtern(aes(
-    x = arena,
-    y = arcilla,
-    z = limo,
+    x = sand,
+    y = clay,
+    z = silt,
     color = om,
     size = bd
   )) + 
   geom_point() + 
   theme_showarrows() +
-    labs(yarrow = "Arcilla (%)",
-       zarrow = "Limo (%)",
-       xarrow = "Arena(%)") +
+    labs(yarrow = "clay (%)",
+       zarrow = "silt (%)",
+       xarrow = "sand(%)") +
   scale_colour_gradient(low = "yellow",
                         high = "red") +
   theme_clockwise() 
@@ -532,12 +532,12 @@ datos_suelo %&gt;%
 ]
 
 .pull-right[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-5-out-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-5-out-1.png" width="360" /&gt;
 ]
 ---
 count: false
  
-### Algo más avanzado
+### More features
 .panel1-plot-label-5-auto[
 
 ```r
@@ -552,7 +552,7 @@ library(ggplot2)  #&lt;&lt;
 ---
 count: false
  
-### Algo más avanzado
+### More features
 .panel1-plot-label-5-auto[
 
 ```r
@@ -568,7 +568,7 @@ library(ggtern)  #&lt;&lt;
 ---
 count: false
  
-### Algo más avanzado
+### More features
 .panel1-plot-label-5-auto[
 
 ```r
@@ -585,43 +585,43 @@ theme_set(theme_bw())  #&lt;&lt;
 ---
 count: false
  
-### Algo más avanzado
+### More features
 .panel1-plot-label-5-auto[
 
 ```r
 library(ggplot2)
 library(ggtern)
 theme_set(theme_bw())
-datos_suelo   #&lt;&lt;
+soil_data   #&lt;&lt;
 ```
 ]
  
 .panel2-plot-label-5-auto[
 
 ```
-  suelo arena limo arcilla om   bd
-1     a    15   52      33  1 1.33
-2     b    18   70      12  3 1.38
-3     c    57    8      35  4 1.76
-4     d    32   26      42 11 1.15
+  soil sand silt clay om   bd
+1    a   15   52   33  1 1.33
+2    b   18   70   12  3 1.38
+3    c   57    8   35  4 1.76
+4    d   32   26   42 11 1.15
 ```
 ]
 
 ---
 count: false
  
-### Algo más avanzado
+### More features
 .panel1-plot-label-5-auto[
 
 ```r
 library(ggplot2)
 library(ggtern)
 theme_set(theme_bw())
-datos_suelo %&gt;%
+soil_data %&gt;%
   ggtern(aes(  #&lt;&lt;
-    x = arena,  #&lt;&lt;
-    y = arcilla,  #&lt;&lt;
-    z = limo,  #&lt;&lt;
+    x = sand,  #&lt;&lt;
+    y = clay,  #&lt;&lt;
+    z = silt,  #&lt;&lt;
     color = om,  #&lt;&lt;
     size = bd  #&lt;&lt;
   ))   #&lt;&lt;
@@ -629,24 +629,24 @@ datos_suelo %&gt;%
 ]
  
 .panel2-plot-label-5-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-5_auto_05_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-5_auto_05_output-1.png" width="360" /&gt;
 ]
 
 ---
 count: false
  
-### Algo más avanzado
+### More features
 .panel1-plot-label-5-auto[
 
 ```r
 library(ggplot2)
 library(ggtern)
 theme_set(theme_bw())
-datos_suelo %&gt;%
+soil_data %&gt;%
   ggtern(aes(
-    x = arena,
-    y = arcilla,
-    z = limo,
+    x = sand,
+    y = clay,
+    z = silt,
     color = om,
     size = bd
   )) +
@@ -655,24 +655,24 @@ datos_suelo %&gt;%
 ]
  
 .panel2-plot-label-5-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-5_auto_06_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-5_auto_06_output-1.png" width="360" /&gt;
 ]
 
 ---
 count: false
  
-### Algo más avanzado
+### More features
 .panel1-plot-label-5-auto[
 
 ```r
 library(ggplot2)
 library(ggtern)
 theme_set(theme_bw())
-datos_suelo %&gt;%
+soil_data %&gt;%
   ggtern(aes(
-    x = arena,
-    y = arcilla,
-    z = limo,
+    x = sand,
+    y = clay,
+    z = silt,
     color = om,
     size = bd
   )) +
@@ -682,94 +682,94 @@ datos_suelo %&gt;%
 ]
  
 .panel2-plot-label-5-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-5_auto_07_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-5_auto_07_output-1.png" width="360" /&gt;
 ]
 
 ---
 count: false
  
-### Algo más avanzado
+### More features
 .panel1-plot-label-5-auto[
 
 ```r
 library(ggplot2)
 library(ggtern)
 theme_set(theme_bw())
-datos_suelo %&gt;%
+soil_data %&gt;%
   ggtern(aes(
-    x = arena,
-    y = arcilla,
-    z = limo,
+    x = sand,
+    y = clay,
+    z = silt,
     color = om,
     size = bd
   )) +
   geom_point() +
   theme_showarrows() +
-    labs(yarrow = "Arcilla (%)",  #&lt;&lt;
-       zarrow = "Limo (%)",  #&lt;&lt;
-       xarrow = "Arena(%)")   #&lt;&lt;
+    labs(yarrow = "clay (%)",  #&lt;&lt;
+       zarrow = "silt (%)",  #&lt;&lt;
+       xarrow = "sand(%)")   #&lt;&lt;
 ```
 ]
  
 .panel2-plot-label-5-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-5_auto_08_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-5_auto_08_output-1.png" width="360" /&gt;
 ]
 
 ---
 count: false
  
-### Algo más avanzado
+### More features
 .panel1-plot-label-5-auto[
 
 ```r
 library(ggplot2)
 library(ggtern)
 theme_set(theme_bw())
-datos_suelo %&gt;%
+soil_data %&gt;%
   ggtern(aes(
-    x = arena,
-    y = arcilla,
-    z = limo,
+    x = sand,
+    y = clay,
+    z = silt,
     color = om,
     size = bd
   )) +
   geom_point() +
   theme_showarrows() +
-    labs(yarrow = "Arcilla (%)",
-       zarrow = "Limo (%)",
-       xarrow = "Arena(%)") +
+    labs(yarrow = "clay (%)",
+       zarrow = "silt (%)",
+       xarrow = "sand(%)") +
   scale_colour_gradient(low = "yellow",  #&lt;&lt;
                         high = "red")   #&lt;&lt;
 ```
 ]
  
 .panel2-plot-label-5-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-5_auto_09_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-5_auto_09_output-1.png" width="360" /&gt;
 ]
 
 ---
 count: false
  
-### Algo más avanzado
+### More features
 .panel1-plot-label-5-auto[
 
 ```r
 library(ggplot2)
 library(ggtern)
 theme_set(theme_bw())
-datos_suelo %&gt;%
+soil_data %&gt;%
   ggtern(aes(
-    x = arena,
-    y = arcilla,
-    z = limo,
+    x = sand,
+    y = clay,
+    z = silt,
     color = om,
     size = bd
   )) +
   geom_point() +
   theme_showarrows() +
-    labs(yarrow = "Arcilla (%)",
-       zarrow = "Limo (%)",
-       xarrow = "Arena(%)") +
+    labs(yarrow = "clay (%)",
+       zarrow = "silt (%)",
+       xarrow = "sand(%)") +
   scale_colour_gradient(low = "yellow",
                         high = "red") +
   theme_clockwise()  #&lt;&lt;
@@ -777,7 +777,7 @@ datos_suelo %&gt;%
 ]
  
 .panel2-plot-label-5-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-5_auto_10_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-5_auto_10_output-1.png" width="360" /&gt;
 ]
 
 &lt;style&gt;
@@ -809,7 +809,7 @@ datos_suelo %&gt;%
 
 
 ---
-###Cargamos polígonos USDA
+### Loading USDA polygons
 
 
 ```r
@@ -833,14 +833,14 @@ head(USDA, 10)
 10 0.20 0.80 0.00 Sandy Clay Loam
 ```
 ---
-###Preparamos las etiquetas para las clases
+###Preparing centered-labels for textural classes
 
 ```r
 library(dplyr)
-USDA_texto &lt;- USDA  %&gt;% group_by(Label) %&gt;%
+USDA_text &lt;- USDA  %&gt;% group_by(Label) %&gt;%
   summarise_if(is.numeric, mean, na.rm = TRUE)
   
-USDA_texto 
+USDA_text
 ```
 
 ```
@@ -876,16 +876,16 @@ ggplot(data = USDA, aes(
     size = 0.5,
     color = "black"
   ) +
-  geom_text(data = USDA_texto,
+  geom_text(data = USDA_text,
             aes(label = Label),
             color = 'black',
             size = 2) +
   geom_point(
-    data = datos_suelo,
+    data = soil_data,
     aes(
-      x = arena,
-      y = arcilla,
-      z = limo
+      x = sand,
+      y = clay,
+      z = silt
     )
   ) +
   theme_showarrows() +
@@ -896,7 +896,7 @@ ggplot(data = USDA, aes(
 ]
 
 .pull-right[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-6-out-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-6-out-1.png" width="360" /&gt;
 ]
 ---
 count: false
@@ -914,7 +914,7 @@ ggplot(data = USDA, aes(  #&lt;&lt;
 ]
  
 .panel2-plot-label-6-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-6_auto_01_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-6_auto_01_output-1.png" width="360" /&gt;
 ]
 
 ---
@@ -934,7 +934,7 @@ ggplot(data = USDA, aes(
 ]
  
 .panel2-plot-label-6-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-6_auto_02_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-6_auto_02_output-1.png" width="360" /&gt;
 ]
 
 ---
@@ -960,7 +960,7 @@ ggplot(data = USDA, aes(
 ]
  
 .panel2-plot-label-6-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-6_auto_03_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-6_auto_03_output-1.png" width="360" /&gt;
 ]
 
 ---
@@ -982,7 +982,7 @@ ggplot(data = USDA, aes(
     size = 0.5,
     color = "black"
   ) +
-  geom_text(data = USDA_texto,  #&lt;&lt;
+  geom_text(data = USDA_text,  #&lt;&lt;
             aes(label = Label),  #&lt;&lt;
             color = 'black',  #&lt;&lt;
             size = 2)   #&lt;&lt;
@@ -990,7 +990,7 @@ ggplot(data = USDA, aes(
 ]
  
 .panel2-plot-label-6-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-6_auto_04_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-6_auto_04_output-1.png" width="360" /&gt;
 ]
 
 ---
@@ -1012,23 +1012,23 @@ ggplot(data = USDA, aes(
     size = 0.5,
     color = "black"
   ) +
-  geom_text(data = USDA_texto,
+  geom_text(data = USDA_text,
             aes(label = Label),
             color = 'black',
             size = 2) +
   geom_point(  #&lt;&lt;
-    data = datos_suelo,  #&lt;&lt;
+    data = soil_data,  #&lt;&lt;
     aes(  #&lt;&lt;
-      x = arena,  #&lt;&lt;
-      y = arcilla,  #&lt;&lt;
-      z = limo  #&lt;&lt;
+      x = sand,  #&lt;&lt;
+      y = clay,  #&lt;&lt;
+      z = silt  #&lt;&lt;
     )  #&lt;&lt;
   )   #&lt;&lt;
 ```
 ]
  
 .panel2-plot-label-6-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-6_auto_05_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-6_auto_05_output-1.png" width="360" /&gt;
 ]
 
 ---
@@ -1050,16 +1050,16 @@ ggplot(data = USDA, aes(
     size = 0.5,
     color = "black"
   ) +
-  geom_text(data = USDA_texto,
+  geom_text(data = USDA_text,
             aes(label = Label),
             color = 'black',
             size = 2) +
   geom_point(
-    data = datos_suelo,
+    data = soil_data,
     aes(
-      x = arena,
-      y = arcilla,
-      z = limo
+      x = sand,
+      y = clay,
+      z = silt
     )
   ) +
   theme_showarrows()   #&lt;&lt;
@@ -1067,7 +1067,7 @@ ggplot(data = USDA, aes(
 ]
  
 .panel2-plot-label-6-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-6_auto_06_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-6_auto_06_output-1.png" width="360" /&gt;
 ]
 
 ---
@@ -1089,16 +1089,16 @@ ggplot(data = USDA, aes(
     size = 0.5,
     color = "black"
   ) +
-  geom_text(data = USDA_texto,
+  geom_text(data = USDA_text,
             aes(label = Label),
             color = 'black',
             size = 2) +
   geom_point(
-    data = datos_suelo,
+    data = soil_data,
     aes(
-      x = arena,
-      y = arcilla,
-      z = limo
+      x = sand,
+      y = clay,
+      z = silt
     )
   ) +
   theme_showarrows() +
@@ -1107,7 +1107,7 @@ ggplot(data = USDA, aes(
 ]
  
 .panel2-plot-label-6-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-6_auto_07_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-6_auto_07_output-1.png" width="360" /&gt;
 ]
 
 ---
@@ -1129,16 +1129,16 @@ ggplot(data = USDA, aes(
     size = 0.5,
     color = "black"
   ) +
-  geom_text(data = USDA_texto,
+  geom_text(data = USDA_text,
             aes(label = Label),
             color = 'black',
             size = 2) +
   geom_point(
-    data = datos_suelo,
+    data = soil_data,
     aes(
-      x = arena,
-      y = arcilla,
-      z = limo
+      x = sand,
+      y = clay,
+      z = silt
     )
   ) +
   theme_showarrows() +
@@ -1148,7 +1148,7 @@ ggplot(data = USDA, aes(
 ]
  
 .panel2-plot-label-6-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-6_auto_08_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-6_auto_08_output-1.png" width="360" /&gt;
 ]
 
 ---
@@ -1170,16 +1170,16 @@ ggplot(data = USDA, aes(
     size = 0.5,
     color = "black"
   ) +
-  geom_text(data = USDA_texto,
+  geom_text(data = USDA_text,
             aes(label = Label),
             color = 'black',
             size = 2) +
   geom_point(
-    data = datos_suelo,
+    data = soil_data,
     aes(
-      x = arena,
-      y = arcilla,
-      z = limo
+      x = sand,
+      y = clay,
+      z = silt
     )
   ) +
   theme_showarrows() +
@@ -1190,7 +1190,7 @@ ggplot(data = USDA, aes(
 ]
  
 .panel2-plot-label-6-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-6_auto_09_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-6_auto_09_output-1.png" width="360" /&gt;
 ]
 
 &lt;style&gt;
@@ -1222,11 +1222,14 @@ ggplot(data = USDA, aes(
 
 
 ---
-##Solo por diversión
+##Just for fun
+&lt;img src="img/twit_sssa.png" width="450px"/&gt;
+---
+##Just for fun
 
 ```r
-triangulo_cientificos &lt;-
-  USDA_texto %&gt;% mutate(
+triangle_soil_scientists &lt;-
+  USDA_text %&gt;% mutate(
     Label =  c(
       "Soil Surveyors",
       "Soil Judgers",
@@ -1258,7 +1261,7 @@ ggplot(data = USDA, aes(
     color = "black",
     show.legend = FALSE
   ) +
-  geom_text(data = triangulo_cientificos,
+  geom_text(data = triangle_soil_scientists,
             aes(label = Label),
             color = 'black',
             size = 2) +
@@ -1273,12 +1276,12 @@ ggplot(data = USDA, aes(
 ]
 
 .pull-right[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-7-out-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-7-out-1.png" width="360" /&gt;
 ]
 ---
 count: false
  
-###Solo por diversión
+###Just for fun
 .panel1-plot-label-7-auto[
 
 ```r
@@ -1291,13 +1294,13 @@ ggplot(data = USDA, aes(  #&lt;&lt;
 ]
  
 .panel2-plot-label-7-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-7_auto_01_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-7_auto_01_output-1.png" width="360" /&gt;
 ]
 
 ---
 count: false
  
-###Solo por diversión
+###Just for fun
 .panel1-plot-label-7-auto[
 
 ```r
@@ -1311,13 +1314,13 @@ ggplot(data = USDA, aes(
 ]
  
 .panel2-plot-label-7-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-7_auto_02_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-7_auto_02_output-1.png" width="360" /&gt;
 ]
 
 ---
 count: false
  
-###Solo por diversión
+###Just for fun
 .panel1-plot-label-7-auto[
 
 ```r
@@ -1338,13 +1341,13 @@ ggplot(data = USDA, aes(
 ]
  
 .panel2-plot-label-7-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-7_auto_03_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-7_auto_03_output-1.png" width="360" /&gt;
 ]
 
 ---
 count: false
  
-###Solo por diversión
+###Just for fun
 .panel1-plot-label-7-auto[
 
 ```r
@@ -1361,7 +1364,7 @@ ggplot(data = USDA, aes(
     color = "black",
     show.legend = FALSE
   ) +
-  geom_text(data = triangulo_cientificos,  #&lt;&lt;
+  geom_text(data = triangle_soil_scientists,  #&lt;&lt;
             aes(label = Label),  #&lt;&lt;
             color = 'black',  #&lt;&lt;
             size = 2)   #&lt;&lt;
@@ -1369,13 +1372,13 @@ ggplot(data = USDA, aes(
 ]
  
 .panel2-plot-label-7-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-7_auto_04_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-7_auto_04_output-1.png" width="360" /&gt;
 ]
 
 ---
 count: false
  
-###Solo por diversión
+###Just for fun
 .panel1-plot-label-7-auto[
 
 ```r
@@ -1392,7 +1395,7 @@ ggplot(data = USDA, aes(
     color = "black",
     show.legend = FALSE
   ) +
-  geom_text(data = triangulo_cientificos,
+  geom_text(data = triangle_soil_scientists,
             aes(label = Label),
             color = 'black',
             size = 2) +
@@ -1401,13 +1404,13 @@ ggplot(data = USDA, aes(
 ]
  
 .panel2-plot-label-7-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-7_auto_05_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-7_auto_05_output-1.png" width="360" /&gt;
 ]
 
 ---
 count: false
  
-###Solo por diversión
+###Just for fun
 .panel1-plot-label-7-auto[
 
 ```r
@@ -1424,7 +1427,7 @@ ggplot(data = USDA, aes(
     color = "black",
     show.legend = FALSE
   ) +
-  geom_text(data = triangulo_cientificos,
+  geom_text(data = triangle_soil_scientists,
             aes(label = Label),
             color = 'black',
             size = 2) +
@@ -1434,13 +1437,13 @@ ggplot(data = USDA, aes(
 ]
  
 .panel2-plot-label-7-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-7_auto_06_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-7_auto_06_output-1.png" width="360" /&gt;
 ]
 
 ---
 count: false
  
-###Solo por diversión
+###Just for fun
 .panel1-plot-label-7-auto[
 
 ```r
@@ -1457,7 +1460,7 @@ ggplot(data = USDA, aes(
     color = "black",
     show.legend = FALSE
   ) +
-  geom_text(data = triangulo_cientificos,
+  geom_text(data = triangle_soil_scientists,
             aes(label = Label),
             color = 'black',
             size = 2) +
@@ -1470,13 +1473,13 @@ ggplot(data = USDA, aes(
 ]
  
 .panel2-plot-label-7-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-7_auto_07_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-7_auto_07_output-1.png" width="360" /&gt;
 ]
 
 ---
 count: false
  
-###Solo por diversión
+###Just for fun
 .panel1-plot-label-7-auto[
 
 ```r
@@ -1493,7 +1496,7 @@ ggplot(data = USDA, aes(
     color = "black",
     show.legend = FALSE
   ) +
-  geom_text(data = triangulo_cientificos,
+  geom_text(data = triangle_soil_scientists,
             aes(label = Label),
             color = 'black',
             size = 2) +
@@ -1507,13 +1510,13 @@ ggplot(data = USDA, aes(
 ]
  
 .panel2-plot-label-7-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-7_auto_08_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-7_auto_08_output-1.png" width="360" /&gt;
 ]
 
 ---
 count: false
  
-###Solo por diversión
+###Just for fun
 .panel1-plot-label-7-auto[
 
 ```r
@@ -1530,7 +1533,7 @@ ggplot(data = USDA, aes(
     color = "black",
     show.legend = FALSE
   ) +
-  geom_text(data = triangulo_cientificos,
+  geom_text(data = triangle_soil_scientists,
             aes(label = Label),
             color = 'black',
             size = 2) +
@@ -1545,7 +1548,7 @@ ggplot(data = USDA, aes(
 ]
  
 .panel2-plot-label-7-auto[
-&lt;img src="flipbook_soiltexture_files/figure-html/plot-label-7_auto_09_output-1.png" width="360" /&gt;
+&lt;img src="flipbook_soiltexture_en_files/figure-html/plot-label-7_auto_09_output-1.png" width="360" /&gt;
 ]
 
 &lt;style&gt;
@@ -1579,22 +1582,22 @@ ggplot(data = USDA, aes(
 ---
 .pull-left[
 ### {soiltexture}
-1. Fácil de usar
-2. Incluye varias clasificaciones de textura
-3. Puede graficar una 4 variable
+1. Easy to use
+2. Includes several texture classifications
+3. Can plot a 4th variable
 ]
 
 .pull-right[
 ### {ggplot2 + ggtern}
-1. Un poco más complejo
-2. Muy flexible para colores y formas
-3. Es necesario hacer las clasificaciones manualmente
+1. Slightly more complex
+2. Very flexible for colors and shapes
+3. It is necessary to prepare data for textural classifications manually
 ]
 ---
 
 class: goodbye-slide, inverse, middle, right
 
-### Dudas? Comentarios? Puedes contactarnos en:
+### Questions? Comments? You can contact us at:
 
 .left[
 [&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"&gt;&lt;/path&gt;&lt;/svg&gt; biofisica.ing.puc.cl](https://biofisica.ing.puc.cl)

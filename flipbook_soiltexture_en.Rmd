@@ -33,7 +33,7 @@ knitr::opts_chunk$set(fig.width = 5, message = FALSE,
 name: about-me
 class: about-me-slide, inverse, middle, center
 
-# About mi
+# About me
 
 <img style="border-radius: 50%;" src="https://saryace.github.io/images/profile.png" width="150px"/>
 
@@ -111,16 +111,16 @@ soil_data <- data.frame(
 * Extra variables, om y bd
 
 ---
-### Con la función summary podemos ver los datos
+### Using summary function for check the data
 ```{r}
 summary(soil_data)
 ```
 ---
 class: inverse, middle, right
 
-##Paquete {soiltexture}
-### Autores: Julien Moeys et al., 2018
-### [Link a repositorio de github](https://github.com/julienmoeys/soiltexture)
+##package {soiltexture}
+### Authors: Julien Moeys et al., 2018
+### [link-github](https://github.com/julienmoeys/soiltexture)
 
 ---
 
@@ -132,7 +132,7 @@ TT.plot(
   class.sys = "USDA.TT",
   tri.data = soil_data,
   css.names = c("clay", "silt", "sand"),
-  main = "Triángulo textura"
+  main = "Soil texture triangle"
 )
 ```
 ]
@@ -151,7 +151,7 @@ TT.plot(
   class.sys = "USDA.TT",
   tri.data = soil_data,
   css.names = c("clay", "silt", "sand"),
-  main = "Triángulo textura",
+  main = "Soil texture triangle",
   z.name = "om"
 )
 ```
@@ -171,7 +171,7 @@ TT.plot(
   class.sys = "USDA.TT",
   tri.data = soil_data,
   css.names = c("clay", "silt", "sand"),
-  main = "Triángulo textura",
+  main = "Soil texture triangle",
   z.name = "om",
   cex.axis = 0.8,
   cex.lab = 0.8
@@ -186,10 +186,10 @@ TT.plot(
 ---
 class: inverse, middle, right
 
-##Paquete {ggplot2} + paquete {ggtern}
-### Autores: Wickham et al., 2016 {ggplot} y Hamilton 2016 {ggtern}
-### [Link a ggplot2](https://ggplot2.tidyverse.org/)
-### [Link a ggtern](https://CRAN.R-project.org/package=ggtern)
+## packages {ggplot2} +{ggtern}
+### Authors: Wickham et al., 2016 {ggplot} y Hamilton 2016 {ggtern}
+### [Link-ggplot2](https://ggplot2.tidyverse.org/)
+### [Link-ggtern](https://CRAN.R-project.org/package=ggtern)
 
 ---
 ### r package {ggplot2 + ggtern}
@@ -221,9 +221,9 @@ soil_data %>%
 ```
 ]
 ---
-`r chunk_reveal(chunk_name = "plot-label-4", title = "### Triángulo simple")`
+`r chunk_reveal(chunk_name = "plot-label-4", title = "### Simple triangle")`
 ---
-### Algo más avanzado
+### More features
 .pull-left[
 ```{r plot-label-5, eval=FALSE,warning=FALSE, message=FALSE}
 library(ggplot2)
@@ -253,9 +253,9 @@ soil_data %>%
 ```
 ]
 ---
-`r chunk_reveal(chunk_name = "plot-label-5", title = "### Algo más avanzado")`
+`r chunk_reveal(chunk_name = "plot-label-5", title = "### More features")`
 ---
-###Cargamos polígonos USDA
+### Loading USDA polygons
 
 ```{r}
 library(ggtern)
@@ -264,13 +264,13 @@ data(USDA)
 head(USDA, 10)
 ```
 ---
-###Preparamos las etiquetas para las clases
+###Preparing centered-labels for textural classes
 ```{r}
 library(dplyr)
-USDA_texto <- USDA  %>% group_by(Label) %>%
+USDA_text <- USDA  %>% group_by(Label) %>%
   summarise_if(is.numeric, mean, na.rm = TRUE)
   
-USDA_texto 
+USDA_text
 ```
 ---
 .pull-left[
@@ -287,7 +287,7 @@ ggplot(data = USDA, aes(
     size = 0.5,
     color = "black"
   ) +
-  geom_text(data = USDA_texto,
+  geom_text(data = USDA_text,
             aes(label = Label),
             color = 'black',
             size = 2) +
@@ -313,10 +313,13 @@ ggplot(data = USDA, aes(
 ---
 `r chunk_reveal(chunk_name = "plot-label-6", title = "### ggplot2 + coord_tern ")`
 ---
-##Solo por diversión
+##Just for fun
+<img src="img/twit_sssa.png" width="450px"/>
+---
+##Just for fun
 ```{r}
-triangulo_cientificos <-
-  USDA_texto %>% mutate(
+triangle_soil_scientists <-
+  USDA_text %>% mutate(
     Label =  c(
       "Soil Surveyors",
       "Soil Judgers",
@@ -347,7 +350,7 @@ ggplot(data = USDA, aes(
     color = "black",
     show.legend = FALSE
   ) +
-  geom_text(data = triangulo_cientificos,
+  geom_text(data = triangle_soil_scientists,
             aes(label = Label),
             color = 'black',
             size = 2) +
@@ -366,26 +369,26 @@ ggplot(data = USDA, aes(
 ```
 ]
 ---
-`r chunk_reveal(chunk_name = "plot-label-7", title = "###Solo por diversión")`
+`r chunk_reveal(chunk_name = "plot-label-7", title = "###Just for fun")`
 ---
 .pull-left[
 ### {soiltexture}
-1. Fácil de usar
-2. Incluye varias clasificaciones de textura
-3. Puede graficar una 4 variable
+1. Easy to use
+2. Includes several texture classifications
+3. Can plot a 4th variable
 ]
 
 .pull-right[
 ### {ggplot2 + ggtern}
-1. Un poco más complejo
-2. Muy flexible para colores y formas
-3. Es necesario hacer las clasificaciones manualmente
+1. Slightly more complex
+2. Very flexible for colors and shapes
+3. It is necessary to prepare data for textural classifications manually
 ]
 ---
 
 class: goodbye-slide, inverse, middle, right
 
-### Dudas? Comentarios? Puedes contactarnos en:
+### Questions? Comments? You can contact us at:
 
 .left[
 [`r icons::fontawesome("link")` biofisica.ing.puc.cl](https://biofisica.ing.puc.cl)
