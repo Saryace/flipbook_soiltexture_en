@@ -314,7 +314,7 @@ ggplot(data = USDA, aes(
 `r chunk_reveal(chunk_name = "plot-label-6", title = "### ggplot2 + coord_tern ")`
 ---
 ##Just for fun
-<img src="img/twit_sssa.png" width="350px"/>
+<img src="img/twit_sssa.png" width="300px"/>
 ---
 ##Just for fun
 ```{r}
