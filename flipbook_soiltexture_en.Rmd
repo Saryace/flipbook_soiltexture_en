@@ -1,6 +1,6 @@
 ---
-title: "Triángulos de textura en R"
-subtitle: "Laboratorio Biofísica de Suelos"
+title: "Soil texture triangles using R"
+subtitle: "Soil Biophysics Lab"
 author: "Sara Acevedo"
 date: "`r format(Sys.time(), '%d / %m / %Y')`"
 output:
@@ -33,14 +33,14 @@ knitr::opts_chunk$set(fig.width = 5, message = FALSE,
 name: about-me
 class: about-me-slide, inverse, middle, center
 
-# Sobre mi
+# About mi
 
 <img style="border-radius: 50%;" src="https://saryace.github.io/images/profile.png" width="150px"/>
 
 *Sara Acevedo*
 
 *Dr. (c) Ciencias de la Ingeniería*
-*Msc. Soil and Biogeochemistry*
+*Msc. Soils and Biogeochemistry*
 
 .fade[Pontificia Universidad Católica de Chile<br>Santiago, Chile]
 
@@ -51,11 +51,11 @@ class: about-me-slide, inverse, middle, center
 name: about-me
 class: about-me-slide, inverse, middle, center
 
-# Sobre Soil Biophysics Lab
+# About Soil Biophysics Lab
 
 <img style="border-radius: 50%;" src="https://static.wixstatic.com/media/a71414_85de21ba13024a48a60097ce851dae16~mv2.png" width="250px"/>
 
-*Laboratorio de Biofísica de Suelos*
+*Soil Biophysics Lab*
 
 *PI: Dr. Carlos Bonilla*
 
@@ -88,32 +88,32 @@ leaflet() %>%
 ---
 class: middle
 
-## Triangulo de textura
+## Soil texture triangle
 
-representacion de los porcentajes de arena, limo y arcilla
+representation of sand, silt and clay percentages
 
 ---
 
-##Para empezar, creamos un dataframe de ejemplo
+##Example dataframe
 
 ```{r}
-datos_suelo <- data.frame(
-  suelo = c("a", "b", "c", "d"),
-  arena = c(15, 18, 57, 32),
-  limo = c(52, 70, 8, 26),
-  arcilla = c(33, 12, 35, 42),
+soil_data <- data.frame(
+  soil= c("a", "b", "c", "d"),
+  sand = c(15, 18, 57, 32),
+  silt = c(52, 70, 8, 26),
+  clay = c(33, 12, 35, 42),
   om = c(1, 3, 4, 11),
   bd = c(1.33, 1.38, 1.76, 1.15)
 )
 ```
 
-* Arena + Limo + Arcilla = 100%
-* Variables extra, om y bd
+* sand + silt + clay = 100%
+* Extra variables, om y bd
 
 ---
 ### Con la función summary podemos ver los datos
 ```{r}
-summary(datos_suelo)
+summary(soil_data)
 ```
 ---
 class: inverse, middle, right
@@ -130,8 +130,8 @@ class: inverse, middle, right
 library(soiltexture)
 TT.plot(
   class.sys = "USDA.TT",
-  tri.data = datos_suelo,
-  css.names = c("arcilla", "limo", "arena"),
+  tri.data = soil_data,
+  css.names = c("clay", "silt", "sand"),
   main = "Triángulo textura"
 )
 ```
@@ -149,8 +149,8 @@ TT.plot(
 library(soiltexture)
 TT.plot(
   class.sys = "USDA.TT",
-  tri.data = datos_suelo,
-  css.names = c("arcilla", "limo", "arena"),
+  tri.data = soil_data,
+  css.names = c("clay", "silt", "sand"),
   main = "Triángulo textura",
   z.name = "om"
 )
@@ -169,8 +169,8 @@ TT.plot(
 library(soiltexture)
 TT.plot(
   class.sys = "USDA.TT",
-  tri.data = datos_suelo,
-  css.names = c("arcilla", "limo", "arena"),
+  tri.data = soil_data,
+  css.names = c("clay", "silt", "sand"),
   main = "Triángulo textura",
   z.name = "om",
   cex.axis = 0.8,
@@ -198,18 +198,18 @@ class: inverse, middle, right
 library(ggplot2)
 library(ggtern)
 theme_set(theme_bw())
-datos_suelo %>%
+soil_data %>%
   ggtern(aes(
-    x = arena,
-    y = arcilla,
-    z = limo,
+    x = sand,
+    y = clay,
+    z = silt,
     color = om
   )) + 
   geom_point(size = 5) + 
   theme_showarrows() +
-    labs(yarrow = "Arcilla (%)",
-       zarrow = "Limo (%)",
-       xarrow = "Arena(%)") +
+    labs(yarrow = "clay (%)",
+       zarrow = "silt (%)",
+       xarrow = "sand(%)") +
   scale_colour_gradient(low = "yellow",
                         high = "red") +
   theme_clockwise() 
@@ -229,19 +229,19 @@ datos_suelo %>%
 library(ggplot2)
 library(ggtern)
 theme_set(theme_bw())
-datos_suelo %>%
+soil_data %>%
   ggtern(aes(
-    x = arena,
-    y = arcilla,
-    z = limo,
+    x = sand,
+    y = clay,
+    z = silt,
     color = om,
     size = bd
   )) + 
   geom_point() + 
   theme_showarrows() +
-    labs(yarrow = "Arcilla (%)",
-       zarrow = "Limo (%)",
-       xarrow = "Arena(%)") +
+    labs(yarrow = "clay (%)",
+       zarrow = "silt (%)",
+       xarrow = "sand(%)") +
   scale_colour_gradient(low = "yellow",
                         high = "red") +
   theme_clockwise() 
@@ -292,11 +292,11 @@ ggplot(data = USDA, aes(
             color = 'black',
             size = 2) +
   geom_point(
-    data = datos_suelo,
+    data = soil_data,
     aes(
-      x = arena,
-      y = arcilla,
-      z = limo
+      x = sand,
+      y = clay,
+      z = silt
     )
   ) +
   theme_showarrows() +
